@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getcontact</title>
+</head>
+
+<body>
+    <h1>Contact details</h1>
+    <!--{{person}} data in tuple -->
+    {% for data in person %}
+    <p>Name: <b>{{data[1]}}</b></p>
+    <p>Phone: <b>{{data[2]}}</b></p>
+    <!--<a href="{{ url_for('delete_contact', id=data[0]) }}">Delete contact</a>
+    <br>    imposible to use these methods in html
+    <a href="{{ url_for('update_contact', id=data[0]) }}">Update contact</a>-->
+    {% endfor %}
+    <br>
+    <a href="/contacts">Go back</a>
+</body>
+
+</html>
